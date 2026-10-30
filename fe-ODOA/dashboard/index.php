@@ -235,7 +235,7 @@ $namaAdmin = $_SESSION['admin_nama'] ?? 'Admin';
 
         const ui = document.getElementById('tabelPendaftar')
 
-        fetch("http://localhost/Project/PKL/odoa/be-ODOA/dashboard.php")
+        fetch("https://staging.kurmaspace.com/pkl-2026/odoa-One-Day-One-Ayat-/be-ODOA/dashboard.php")
         .then((response) => response.json())
         .then((result) => {
             console.log(result)

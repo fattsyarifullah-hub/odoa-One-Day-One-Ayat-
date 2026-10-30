@@ -211,7 +211,7 @@ $error = '';
                 password: password 
             }
 
-            fetch("http://localhost/Project/PKL/odoa/be-ODOA/login.php", {
+            fetch("https://staging.kurmaspace.com/pkl-2026/odoa-One-Day-One-Ayat-/be-ODOA/login.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -224,7 +224,7 @@ $error = '';
 
                 if (data.status === 'success') {
                     console.log('Berhasil membuat session')
-                    window.location.href = '../dashboard/index.php'
+
                 } else {
                     console.error('gagal membuat session', data.error)
                 }
