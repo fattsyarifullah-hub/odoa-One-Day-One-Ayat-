@@ -1,0 +1,111 @@
+/* BEM: Block - .quran-admin-auth */
+.quran-admin-auth {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b3d2c; 
+    min-height: 100vh;
+}
+
+/* BEM: Elements */
+.quran-admin-auth__card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    border-top: 5px solid #d4af37;
+    border-bottom: 5px solid #0b3d2c;
+}
+
+.quran-admin-auth__icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: #eaf4f0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d4af37;
+}
+
+.quran-admin-auth__icon {
+    font-size: 2rem;
+    color: #0b3d2c;
+}
+
+.quran-admin-auth__title {
+    font-family: 'Times new roman', serif;
+    color: #0b3d2c;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.quran-admin-auth__subtitle {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.quran-admin-auth__label {
+    font-weight: 600;
+    color: #0b3d2c;
+    margin-bottom: 0.5rem;
+}
+
+.quran-admin-auth__input-icon {
+    background-color: #f8f9fa;
+    border-right: none;
+    color: #127554;
+}
+
+.quran-admin-auth__input {
+    border-left: none;
+}
+
+.quran-admin-auth__input:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+    background-color: #fff;
+}
+
+/* Mengubah warna border saat input fokus */
+.quran-admin-auth__input:focus ~ .input-group-prepend .quran-admin-auth__input-icon,
+.input-group-prepend .quran-admin-auth__input-icon,
+.quran-admin-auth__input {
+    border-color: #127554;
+}
+
+.quran-admin-auth__input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(18, 117, 84, 0.25);
+}
+
+.quran-admin-auth__checkbox-label {
+    color: #495057;
+    font-size: 0.9rem;
+    padding-top: 2px;
+}
+
+.quran-admin-auth__btn {
+    padding: 0.75rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* BEM: Modifiers */
+.quran-admin-auth__btn--submit {
+    background-color: #0b3d2c;
+    color: #ffffff;
+    border: none;
+}
+
+.quran-admin-auth__btn--submit:hover,
+.quran-admin-auth__btn--submit:focus {
+    background-color: #127554;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(8, 44, 32, 0.3);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #0b3d2c;
+    border-color: #0b3d2c;
+}

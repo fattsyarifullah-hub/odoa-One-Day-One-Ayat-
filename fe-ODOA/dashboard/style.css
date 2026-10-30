@@ -1,0 +1,202 @@
+
+/* Dasar */
+body {
+    margin: 0;
+    background-color: #f5f8f5;
+    color: #26382d;
+    font-family: Arial, sans-serif;
+}
+
+.admin {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.admin__sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    padding: 25px 18px;
+    background-color: #174d35;
+    color: white;
+}
+
+.admin__logo {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.admin__subtitle {
+    color: #c8dfd0;
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+.admin__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin__link {
+    padding: 12px;
+    border-radius: 6px;
+    color: #e0eee5;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.admin__link:hover,
+.admin__link--active {
+    background-color: #287650;
+    color: white;
+    text-decoration: none;
+}
+
+/* Konten utama */
+.admin__content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+}
+
+.admin__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.admin__title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.admin__description {
+    color: #78867c;
+    margin-bottom: 0;
+}
+
+.admin__badge {
+    background-color: #dcefe2;
+    color: #1b6540;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Kartu statistik */
+.admin__card {
+    padding: 22px;
+    background-color: white;
+    border: 1px solid #e5ece6;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.admin__card-label {
+    color: #78867c;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.admin__card h3 {
+    color: #205e3c;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* Tabel */
+.admin__section {
+    background-color: white;
+    border: 1px solid #e5ece6;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.admin__section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.admin__section-title {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.admin__search {
+    max-width: 230px;
+}
+
+.admin__table thead th {
+    background-color: #edf5ef;
+    color: #28563a;
+    border-top: none;
+    white-space: nowrap;
+}
+
+.admin__table td {
+    vertical-align: middle;
+}
+
+.admin__table tbody tr:hover {
+    background-color: #f8fbf8;
+}
+
+/* Tombol */
+.admin__button {
+    background-color: #237447;
+    border-color: #237447;
+    color: white;
+}
+
+.admin__button:hover {
+    background-color: #174d35;
+    color: white;
+}
+
+/* Modal */
+.admin__modal-header {
+    background-color: #174d35;
+    color: white;
+}
+
+#pesan {
+    resize: vertical;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .admin {
+        flex-direction: column;
+    }
+
+    .admin__sidebar {
+        width: 100%;
+    }
+
+    .admin__nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .admin__content {
+        padding: 18px;
+    }
+
+    .admin__header {
+        gap: 12px;
+    }
+
+    .admin__section-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin__search {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,259 @@
+/* BEM: Block - .quran-auth */
+.quran-auth {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b3d2c;
+    min-height: 100vh;
+}
+
+/*BEM: Elements */
+.quran-auth__card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    border-top: 5px solid #d4af37; 
+    border-bottom: 5px solid #0b3d2c;
+}
+
+.quran-auth__icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: #eaf4f0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d4af37;
+}
+
+.quran-auth__icon {
+    font-size: 2rem;
+    color: #0b3d2c;
+}
+
+.quran-auth__title {
+    font-family: 'Arial', serif;
+    color: #0b3d2c;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.quran-auth__subtitle {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.quran-auth__label {
+    font-weight: 600;
+    color: #0b3d2c;
+    margin-bottom: 0.5rem;
+}
+
+.quran-auth__input-icon {
+    background-color: #f8f9fa;
+    border-right: none;
+    color: #127554;
+}
+
+.quran-auth__input {
+    border-left: none;
+}
+
+.quran-auth__input:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+    background-color: #fff;
+}
+
+/* Mengubah warna border saat input fokus menggunakan trik parent focus */
+.quran-auth__input:focus ~ .input-group-prepend .quran-auth__input-icon,
+.input-group-prepend .quran-auth__input-icon,
+.quran-auth__input {
+    border-color: #127554;
+}
+.quran-auth__input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(18, 117, 84, 0.25);
+}
+
+.quran-auth__checkbox-label {
+    color: #495057;
+    font-size: 0.9rem;
+    padding-top: 2px;
+}
+
+.quran-auth__btn {
+    padding: 0.75rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* BEM: Modifiers */
+.quran-auth__btn--submit {
+    background-color: #0b3d2c;
+    color: #ffffff;
+    border: none;
+}
+
+.quran-auth__btn--submit:hover,
+.quran-auth__btn--submit:focus {
+    background-color: #127554;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(11, 61, 44, 0.2);
+}
+
+/* Ubah warna checkbox bawaan bootstrap */
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #0b3d2c;
+    border-color: #0b3d2c;
+}
+
+/* BEM: Tambahan Elemen Link Daftar */
+.quran-auth__text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.quran-auth__link {
+    color: #0b3d2c;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.quran-auth__link:hover,
+.quran-auth__link:focus {
+    color: #d4af37; 
+    text-decoration: none;
+}
+
+/* BEM: Block - .quran-auth (KODE SEBELUMNYA TETAP SAMA) */
+.quran-auth {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b3d2c; 
+    min-height: 100vh;
+}
+
+.quran-auth__card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    border-top: 5px solid #d4af37; 
+    border-bottom: 5px solid #0b3d2c;
+}
+
+.quran-auth__icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: #eaf4f0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d4af37;
+}
+
+.quran-auth__icon {
+    font-size: 2rem;
+    color: #0b3d2c;
+}
+
+.quran-auth__title {
+    font-family: 'Times new Roman', serif;
+    color: #0b3d2c;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.quran-auth__subtitle {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.quran-auth__label {
+    font-weight: 600;
+    color: #0b3d2c;
+    margin-bottom: 0.5rem;
+}
+
+.quran-auth__input-icon {
+    background-color: #f8f9fa;
+    border-right: none;
+    color: #127554;
+}
+
+.quran-auth__input {
+    border-left: none;
+}
+
+.quran-auth__input:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+    background-color: #fff;
+}
+
+.quran-auth__input:focus ~ .input-group-prepend .quran-auth__input-icon,
+.input-group-prepend .quran-auth__input-icon,
+.quran-auth__input {
+    border-color: #127554;
+}
+
+.quran-auth__input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(18, 117, 84, 0.25);
+}
+
+.quran-auth__checkbox-label {
+    color: #495057;
+    font-size: 0.9rem;
+    padding-top: 2px;
+}
+
+.quran-auth__btn {
+    padding: 0.75rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.quran-auth__btn--submit {
+    background-color: #0b3d2c;
+    color: #ffffff;
+    border: none;
+}
+
+.quran-auth__btn--submit:hover,
+.quran-auth__btn--submit:focus {
+    background-color: #127554;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(11, 61, 44, 0.2);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #0b3d2c;
+    border-color: #0b3d2c;
+}
+
+.quran-auth__text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.quran-auth__link {
+    color: #0b3d2c;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.quran-auth__link:hover,
+.quran-auth__link:focus {
+    color: #d4af37; 
+    text-decoration: none;
+}
