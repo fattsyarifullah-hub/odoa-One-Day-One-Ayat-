@@ -45,7 +45,7 @@ const form = document.getElementById("kirimAyat")
         const nama = document.getElementById('nama')
         const nomor_wa = document.getElementById('nomor_wa')
 
-        fetch(`http://localhost/Project/PKL/be-ODOA/showOne.php?id=${idValue}`)
+        fetch(`https://staging.kurmaspace.com/pkl-2026/odoa/be-ODOA/showOne.php?id=${idValue}`)
         .then((response) => response.json())
         .then((data) => {
             console.log(data.data)
@@ -62,7 +62,7 @@ const form = document.getElementById("kirimAyat")
             nomor_wa: `${nomor_wa.value}`,
         }
 
-        fetch("http://localhost/Project/PKL/be-ODOA/chat.php", {
+        fetch("https://staging.kurmaspace.com/pkl-2026/odoa/be-ODOA/chat.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

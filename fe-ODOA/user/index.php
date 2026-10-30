@@ -72,7 +72,7 @@
                 nomor_wa: nomor_wa 
             }
 
-            fetch("http://localhost/Project/PKL/be-ODOA/register.php", {
+            fetch("https://staging.kurmaspace.com/pkl-2026/odoa/be-ODOA/register.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

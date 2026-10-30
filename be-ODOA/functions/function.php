@@ -4,7 +4,7 @@ require __DIR__ . "/../config/config.php";
 
 function connectDB()
 {
-    $conn = new PDO('mysql:host=localhost;dbname=be_odoa', 'root', '');
+    $conn = new PDO('mysql:host=192.168.100.34:3307;dbname=odoa', 'root', 'dbpkl@2026');
     return $conn;
 }
 

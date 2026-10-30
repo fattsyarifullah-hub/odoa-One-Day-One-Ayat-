@@ -212,7 +212,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 password: password 
             }
 
-            fetch("http://localhost/Project/PKL/be-ODOA/login.php", {
+            fetch("https://staging.kurmaspace.com/pkl-2026/odoa/be-ODOA/login.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
