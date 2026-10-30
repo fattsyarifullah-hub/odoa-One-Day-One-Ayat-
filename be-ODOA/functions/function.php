@@ -155,7 +155,9 @@ function login($input)
         http_response_code(200);
         return [
             'status' => 'success',
-            'message' => 'berhasil login'
+            'message' => 'berhasil login',
+            'admin_id' => $data['id'],
+            'admin_nama' => $data['nama'],
         ];
     } else {
         header('Content-Type: application/json');

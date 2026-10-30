@@ -2,36 +2,36 @@
 session_start();
 
 // Jika sudah login, langsung ke dashboard
-// if (isset($_SESSION['admin_id'])) {
-//     header("Location: ../dashboard/index.php");
-//     exit;
-// }
+if (isset($_SESSION['admin_id'])) {
+    header("Location: ../dashboard/index.php");
+    exit;
+}
 
 $error = '';
 
 // Proses form login
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nama = trim($_POST['nama'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $password = $_POST['password'] ?? '';
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//     $nama = trim($_POST['nama'] ?? '');
+//     $email = trim($_POST['email'] ?? '');
+//     $password = $_POST['password'] ?? '';
 
-    if (
-        $nama !== '' &&
-        filter_var($email, FILTER_VALIDATE_EMAIL) &&
-        trim($password) !== ''
-    ) {
-        session_regenerate_id(true);
+//     if (
+//         $nama !== '' &&
+//         filter_var($email, FILTER_VALIDATE_EMAIL) &&
+//         trim($password) !== ''
+//     ) {
+//         session_regenerate_id(true);
 
-        $_SESSION['admin_id'] = 1;
-        $_SESSION['admin_nama'] = $nama;
-        $_SESSION['admin_email'] = $email;
+//         $_SESSION['admin_id'] = 1;
+//         $_SESSION['admin_nama'] = $nama;
+//         $_SESSION['admin_email'] = $email;
 
-        header("Location: ../dashboard/index.php");
-        exit;
-    } else {
-        $error = 'Mohon isi nama, email, dan kata sandi dengan benar.';
-    }
-}
+//         header("Location: ../dashboard/index.php");
+//         exit;
+//     } else {
+//         $error = 'Mohon isi nama, email, dan kata sandi dengan benar.';
+//     }
+// }
 ?>
 
 <!DOCTYPE html>
@@ -200,7 +200,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const form = document.getElementById('formLogin')
         
         form.addEventListener("submit", function(e) {
-            e.preventDefault()
             
             const nama = document.getElementById('adminNama').value
             const email = document.getElementById('adminEmail').value
@@ -212,18 +211,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 password: password 
             }
 
-            fetch("https://staging.kurmaspace.com/pkl-2026/odoa/be-ODOA/login.php", {
+            fetch("http://localhost/Project/PKL/odoa/be-ODOA/login.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
+                credentials: "include",
                 body: JSON.stringify(jsonData)
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log('success', data)
+
+                if (data.status === 'success') {
+                    console.log('Berhasil membuat session')
+                    window.location.href = '../dashboard/index.php'
+                } else {
+                    console.error('gagal membuat session', data.error)
+                }
                 
-                window.location.href = '../dashboard/index.php'
             })
             .catch(error => {
                 console.error('Error', error.message)
